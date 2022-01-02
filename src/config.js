@@ -15,14 +15,14 @@ export const config = {
   OAuthSecret: 'cc3db76ffe9848c92d83172807eececa79f0eb22',
 
   // Your Personal Blog Title
-  title : "Saad Pasta" ,
+  title : "Equality" ,
 
   // Your Personal Blog Subtitle
-  subtitle : "Software Developer",
+  subtitle : "News blog",
 
   // Header customization
   header: {
-    backgroundColor: '#f1f6f8', // can be a CSS gradient
+    backgroundColor: '#de8ede', // can be a CSS gradient
     backgroundColorDark: '#4C566A',
     titleColor: '#ff5252',
     titleColorDark: '#16a085',

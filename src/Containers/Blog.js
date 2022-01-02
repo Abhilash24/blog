@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 import { config } from "../config";
 import { Header } from "../Components/Header";
+import { DATA} from "../shared/data"
 import { Loader } from '../Components/Common'
 import { BlogContainer } from '../Components/Blog'
 import { Card } from '../Components/Blog/Card'
@@ -40,7 +41,10 @@ const GET_POSTS = gql`
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
-  const { loading, error, data } = useQuery(GET_POSTS);
+  // const { loading, error, data } = useQuery(GET_POSTS);
+  const loading = false;
+  const data  = DATA[0];
+  const error = false;
 
   useEffect(() => {
     if (!loading) {

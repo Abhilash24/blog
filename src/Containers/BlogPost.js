@@ -5,6 +5,7 @@ import readingTime from "reading-time";
 import { GithubSelector, GithubCounter } from "react-reactions";
 import { userClient } from '../Utils/apollo'
 import { gql } from "apollo-boost";
+import { DATA_ARTICLE} from "../shared/dataArticles"
 import { useQuery } from "@apollo/react-hooks";
 
 import { config } from "../config";
@@ -70,7 +71,13 @@ export default function BlogHome() {
   const [reactionPopup, setReactionPopup] = useState(false);
   const [postReactions, setPostReactions] = useState([]);
   const [postComments, setPostComments] = useState([]);
-  const { loading, error, data } = useQuery(GET_POSTS);
+  // const { loading, error, data } = useQuery(GET_POSTS);
+  const loading = false;
+  const data  = DATA_ARTICLE[0];
+  const error = false;
+  // console.log(data);
+  console.log(DATA_ARTICLE[0]);
+
   const reactionsContainer = useRef(null);
   const userToken = localStorage.getItem('githubToken');
 
